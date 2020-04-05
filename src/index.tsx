@@ -1,7 +1,21 @@
+import './index.scss';
+import img1 from './assets/img/1.jpg';
+
+const element = document.createElement('div');
 const p: HTMLElement = document.createElement('p');
 const text: string = 'Hello from webpack dev server!';
 p.textContent = text;
-document.body.append(p);
+const myIcon = new Image();
+myIcon.src = img1;
+
+element.appendChild(myIcon);
+
+const p2 = document.createElement('p');
+const numbers1 = [1, 2, 3, 4, 5, 6];
+const numbers2 = [7, 8, 9, 10];
+const numbers3 = [...numbers1, ...numbers2];
+p2.textContent = numbers3.join(' ');
+document.body.appendChild(p2);
 
 const data: Array<string> = [
   'Hello from webpack!',

@@ -1,0 +1,9 @@
+body {
+  background: palevioletred;
+}
+
+.body {
+  &__test {
+    background: palegoldenrod;
+  }
+}

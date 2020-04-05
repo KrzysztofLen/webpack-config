@@ -12,7 +12,27 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.json'],
   },
   module: {
-    rules: [{ test: /\.tsx?$/, loader: 'ts-loader' }],
+    rules: [
+      {
+        test: /\.tsx?$/,
+        exclude: /[\\/]node_modules[\\/]/,
+        loader: 'ts-loader',
+      },
+      {
+        test: /\.(png|jpe?g|gif|jp2|webp)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'images/[name].[ext]',
+        },
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /[\\/]node_modules[\\/]/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+    ],
   },
   plugins: [
     new CleanWebpackPlugin(),
