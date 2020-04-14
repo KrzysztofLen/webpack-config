@@ -1,1 +1,0 @@
-{"version":3,"sources":["css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/index.scss"],"names":[],"mappings":"AAAA,KAAK,kBAAA,CAAyB,YAAY,kBAAA","file":"main.e39f752932f0485f7d65.css","sourcesContent":["body{background:palevioletred}.body__test{background:palegoldenrod}\n"]}

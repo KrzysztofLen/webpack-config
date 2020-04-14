@@ -1,14 +1,10 @@
 import './index.scss';
-import img1 from './assets/img/1.jpg';
+import { cube } from './math';
 
-const element = document.createElement('div');
 const p: HTMLElement = document.createElement('p');
-const text: string = 'Hello from webpack dev server!';
+const text = 'Hello from webpack dev server!';
 p.textContent = text;
 const myIcon = new Image();
-myIcon.src = img1;
-
-element.appendChild(myIcon);
 
 const p2 = document.createElement('p');
 const numbers1 = [1, 2, 3, 4, 5, 6];
@@ -23,10 +19,11 @@ const data: Array<string> = [
   'Text paragraph',
 ];
 
-// data.forEach((element: any) => {
-//   p.textContent = element;
-//   document.body.append(p);
-// });
+const element = document.createElement('pre');
+
+element.innerHTML = ['Hello webpack!', '5 cubed is equal to ' + cube(5)].join(
+  '\n\n',
+);
 
 function test(el: any) {
   return el;
